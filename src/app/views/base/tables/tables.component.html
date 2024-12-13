@@ -1,0 +1,55 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong >Liste des regions</strong>
+       
+      </c-card-header>
+      <c-card-body>
+       
+        <!--div *ngIf="isLoadingbis" class="text-center">
+          <span class="spinner-grow spinner-border-lg custom-spinner" role="status" aria-hidden="true" style="color: #E79A50;"></span>
+          
+        </div-->
+        
+
+        <!-- Affichage de la table si les données sont chargées (isLoading est false) -->
+        <table stripedColumns cTable>
+          <thead>
+            <tr>
+             
+              <th  scope="col">Regions</th>
+              
+              <th scope="col">Sol</th>
+              <th scope="col">Sableux</th>
+              <th scope="col">Limoneux</th>
+              <th scope="col">Argileux</th>
+              <th scope="col">Argileux Limoneux</th>
+              <th scope="col">Sableux Limoneux</th>
+             
+              
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let region of regionsData; let i = index">
+              
+              
+              
+              <td>{{ region.region }}</td>
+              <td>{{ region.total_sols }}</td>
+              <td>{{ getSoilCount(region.soil_counts_by_type, 'Sableux') }}</td>
+              <td>{{ getSoilCount(region.soil_counts_by_type, 'Limoneux') }}</td>
+              <td>{{ getSoilCount(region.soil_counts_by_type, 'Argileux') }}</td>
+              <td>{{ getSoilCount(region.soil_counts_by_type, 'Argile limoneuse') }}</td>
+              <!--td>{{ getSoilCount(region.soil_counts_by_type, 'Limono-argileux') }}</td-->
+              <td>{{ getSoilCount(region.soil_counts_by_type, 'Sablo-limoneux') }}</td>
+              
+             
+            </tr>
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

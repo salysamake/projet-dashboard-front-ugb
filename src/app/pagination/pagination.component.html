@@ -1,0 +1,21 @@
+<c-pagination aria-label="Page navigation example" >
+    
+  <li cPageItem [class.disabled]="currentPage === 0">
+    <button cPageLink aria-label="Previous" (click)="onPageChange(currentPage - 1)" style="border: none;">
+      <span aria-hidden="true">&laquo;</span>
+    </button>
+  </li>
+
+  
+  <!--li cPageItem *ngFor="let page of pages; let i = index" [class.active]="i === currentPage">
+    <a cPageLink (click)="onPageChange(i)">{{ i + 1 }}</a>
+  </li-->
+  <span>Page {{ currentPage }} sur {{ totalPages }}</span>
+
+  
+  <li cPageItem [class.disabled]="currentPage === totalPages ">
+    <button cPageLink aria-label="Next" (click)="onPageChange(currentPage + 1)" style="border: none;">
+      <span aria-hidden="true">&raquo;</span>
+    </button>
+  </li>
+</c-pagination>

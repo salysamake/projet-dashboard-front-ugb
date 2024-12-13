@@ -1,0 +1,28 @@
+:host {
+  .legend {
+    small {
+      font-size: x-small;
+    }
+  }
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+}
+

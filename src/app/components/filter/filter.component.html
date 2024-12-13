@@ -1,0 +1,13 @@
+<div class="me-2" >
+    <!--select id="application" [(ngModel)]="selectedApplication" class="form-control" (change)="filterByApplication()" [style.visibility]="isAdmin() && !isNotif ? 'visible' : 'hidden'">
+      <option value="" selected>Filtrer par application</option>
+      <option *ngFor="let app of applications" [value]="app">{{ app }}</option>
+    </select-->
+    <select id="region" [(ngModel)]="selectedRegion" class="form-control" (change)="filterByRegion()">
+      <option value="" selected>Filtrer par region</option>
+      <option *ngFor="let region of regions" [value]="region">{{ region }}</option>
+    </select>
+    
+  
+  
+  </div>
